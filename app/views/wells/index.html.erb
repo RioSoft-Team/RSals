@@ -1,0 +1,17 @@
+<section class="top">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Wells</h1>
+        <ul>
+          <% @wells.each do |well| %>
+            <li>
+              <%= link_to well.name, well %>
+            </li>
+          <% end %>
+        </ul>
+        <%= link_to "New Well", new_well_path %>
+      </div>
+    </div>
+  </div>    
+</section>

@@ -1,0 +1,47 @@
+<%= form_with model: @well do |form| %>
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+    <% @well.errors.full_messages_for(:name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>    
+  </div>
+
+  <div>
+    <%= form.label :complete %><br>
+    <%= form.text_field :complete %>
+    <% @well.errors.full_messages_for(:complete).each do |message| %>
+      <div><%= message %></div>
+    <% end %>    
+  </div>
+
+  <div>
+    <%= form.label :facility %><br>
+    <%= form.text_field :facility %>
+    <% @well.errors.full_messages_for(:facility).each do |message| %>
+      <div><%= message %></div>
+    <% end %>    
+  </div>
+
+  <div>
+  <%= form.label :company %><br>
+  <%= form.text_field :company %>
+  <% @well.errors.full_messages_for(:company).each do |message| %>
+    <div><%= message %></div>
+  <% end %>    
+  </div>
+
+
+  <div>
+    <%= form.label :als %><br>
+    <%= form.text_field :als %>
+    <% @well.errors.full_messages_for(:als).each do |message| %>
+      <div><%= message %></div>
+    <% end %>    
+  </div>
+
+  <br>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

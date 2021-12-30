@@ -1,0 +1,14 @@
+<h1><%= @well.name %></h1>
+<p>Name/Nombre: <%= @well.complete %></p>
+<p>Facility/Instalacion: <%= @well.facility %></p>
+<p>Company/Compañia: <%= @well.company %></p>
+<p>ALS/SAP: <%= @well.als %></p>
+
+<ul>
+  <li><%= link_to "Edit", edit_well_path(@well) %></li>
+  <li><%= link_to "Destroy", well_path(@well),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %></li>  
+</ul>
+
+<%= link_to "Back to List", root_path %>
