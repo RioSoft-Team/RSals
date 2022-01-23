@@ -1,14 +1,51 @@
-<h1><%= @well.name %></h1>
-<p>Name/Nombre: <%= @well.complete %></p>
-<p>Facility/Instalacion: <%= @well.facility %></p>
-<p>Company/Compañia: <%= @well.company %></p>
-<p>ALS/SAP: <%= @well.als %></p>
+<section class="top">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
 
-<ul>
-  <li><%= link_to "Edit", edit_well_path(@well) %></li>
-  <li><%= link_to "Destroy", well_path(@well),
-                  method: :delete,
-                  data: { confirm: "Are you sure?" } %></li>  
-</ul>
+        <div class="title-card">
+          <header class="title-text">Well <%= @well.name %><header>
+        </div>
 
-<%= link_to "Back to List", root_path %>
+        <div class="options-card">
+          <%= link_to "Back to List", wells_path, class: "bottom-link" %>
+          <%= link_to "Edit", edit_well_path(@well), class: "bottom-link" %>
+          <%= link_to "Destroy", well_path(@well), class: "bottom-link", data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+        </div>
+
+      </div>  
+      <div class="col-md-6">
+
+        <div class="main-card">
+
+          <p>Name: <%= @well.complete %></p>
+          <p>Facility: <%= @well.facility %></p>
+          <p>Company: <%= @well.company %></p>
+          <p>ALS: <%= @well.als %></p>
+
+        </div>
+
+        <div class="main-card">
+
+          <p>Tanks</p>
+          <%= render @well.tanks %>
+
+        </div>        
+
+      </div>  
+
+      <div class="col-md-6">
+
+        <div class="main-card">
+
+          <p>Add Tank</p>
+          <%= render 'tanks/form' %>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>    
+</section>

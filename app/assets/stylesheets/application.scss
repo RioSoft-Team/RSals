@@ -14,3 +14,14 @@
  *= require_self
  */
  // Graphical variables
+
+ @import 'bootstrap/scss/bootstrap';
+
+ .navbar-header {
+   padding-left: 10px;
+ }
+
+.home-image {
+  width: 1116px;
+  border-image: fill;
+}  

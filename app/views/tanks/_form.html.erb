@@ -1,0 +1,7 @@
+<%= form_with model: [ @well, @well.tanks.build ] do |form| %>
+  <p><%= form.label :supplier %><br>
+  <%= form.text_field :supplier %></p>
+  <p><%= form.label :serial%><br>
+  <%= form.text_field :serial %></p>
+  <p><%= form.submit %></p>
+<% end %>

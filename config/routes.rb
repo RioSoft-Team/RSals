@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  root "wells#index"
-  
-  resources :wells
+  root "pages#home"
+    
+  resources :wells do
+    resources :tanks
+  end
 end

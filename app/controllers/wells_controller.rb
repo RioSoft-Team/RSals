@@ -1,6 +1,10 @@
 class WellsController < ApplicationController
   def index
-    @wells = Well.all
+    if params[:search]
+      @wells = Well.where( name: params[:search] )
+    else
+      @wells = Well.all                
+    end
   end
 
   def show

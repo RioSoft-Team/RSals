@@ -1,0 +1,11 @@
+<% @well.tanks.each do |tank| %>
+  <p>Supplier: <%= tank.supplier %></p>
+  <p>Serial:<%= tank.serial %></p>
+<% end %>
+
+<p>
+  <%= link_to "Destroy Tank", [tank.well, tank], data: {
+                turbo_method: :delete,
+                turbo_confirm: "Are you sure?"
+              }, class: "bottom-link" %>
+</p>

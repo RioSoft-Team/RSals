@@ -2,15 +2,35 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h1>Wells</h1>
-        <ul>
-          <% @wells.each do |well| %>
-            <li>
-              <%= link_to well.name, well %>
-            </li>
+
+        <div class="title-card">
+
+          <header class="title-text">Wells<header>
+          
+        </div>  
+
+        <div class="options-card">
+
+          <%= form_tag( wells_path, method: :get ) do %>
+          <%= link_to "New Well", new_well_path, class: "bottom-link" %>
+          <%= text_field_tag(:search, params[:search]) %>
+          <%= submit_tag ("Search") %>
           <% end %>
-        </ul>
-        <%= link_to "New Well", new_well_path %>
+
+        </div>
+
+        <div class="main-card">
+
+          <ul>
+            <% @wells.each do |well| %>
+              <li>
+                <%= link_to well.name, well %>
+              </li>
+            <% end %>
+          </ul>
+
+        </div>
+
       </div>
     </div>
   </div>    

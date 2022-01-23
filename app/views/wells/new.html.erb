@@ -1,6 +1,21 @@
-<h1>New Well</h1>
+<section class="top">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+  
+        <div class="title-card">
+          <header class="title-text">New Well<header>
+        </div>
 
-<%= render "form", well: @well %>
+        <div class="options-card">
+          <%= link_to "Back to Wells", wells_path, class: "bottom-link" %>        
+        </div>  
 
-<br>
-<%= link_to "Back to Wells", wells_path %>
+        <div class="main-card">
+          <%= render "form", well: @well %>
+        </div>
+
+      </div>
+    </div>
+  </div>    
+</section>

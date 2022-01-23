@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  supplier: MyString
+  serial: MyString
+  well: one
+
+two:
+  supplier: MyString
+  serial: MyString
+  well: two
